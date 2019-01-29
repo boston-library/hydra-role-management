@@ -20,7 +20,7 @@
 </ul>
 <h3><%= t('role-management.edit.add_new_account') %></h3>
 <%= bootstrap_form_tag role_management.role_users_path(role_id: @role), :method => :post do |f| %>
-  <%= f.text_field 'user_key', :label=>t('role-management.edit.user') %>
+  <%= bootstrap_text_field_tag 'user_key', :label=>t('role-management.edit.user') %>
   <%= f.submit t('role-management.edit.add') %>
   <%= link_to t('role-management.edit.cancel'), role_management.roles_path, :class => 'btn btn-default' %>
 <% end %>
